@@ -334,11 +334,7 @@
 }
 
 .diplomas {
-  position: relative;
-  overflow: hidden;
-  padding: 0 0 119px 0;
-  user-select: none;
-  touch-action: pan-y;
+  padding: 100px 0 119px 0;
 }
 
 .diplomas__title {
@@ -346,48 +342,18 @@
   margin-bottom: 60px;
 }
 
-.slides-container {
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-}
-
-.touch-slider {
-  scroll-behavior: auto;
-  scroll-snap-type: both mandatory;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-}
-
-/* WebKit */
-.touch-slider::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-}
-
-.active {
-	scroll-snap-type: unset;
-}
-
-.grab {
-  cursor: grab;
-}
-
-.grabbing{
-  cursor: grabbing;
-}
-
 .diplomas-list {
   margin: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
   gap: 12px;
-  padding-left: calc((100vw - 1160px) / 2);
 }
 
 .diplomas-list__item {
   background: var(--clr-white);
   border-radius: 16px;
   pointer-events: none;
-  min-width: 379px;
+  min-width: 296px;
   box-sizing: border-box;
 }
 
@@ -396,7 +362,6 @@
   width: 100%;
   object-fit: contain;
   object-position: center center;
-  height: 400px;
 }
 
 .request {
@@ -466,18 +431,6 @@
   position: relative;
 }
 
-.approach__info::before {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: 90px;
-  height: 90px;
-  background-image: url(./images/bg-icon.jpg);
-  background-size: auto;
-  background-repeat: no-repeat;
-}
-
 .services__content {
   padding: 0 0 120px;
   display: flex;
@@ -500,18 +453,6 @@
   padding-right: 60px;
   box-sizing: border-box;
   position: relative;
-}
-
-.services__info::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 90px;
-  height: 90px;
-  background-image: url(./images/bg-icon.jpg);
-  background-size: auto;
-  background-repeat: no-repeat;
 }
 
 .contact-me {
