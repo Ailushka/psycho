@@ -201,6 +201,7 @@
     background: white;
     align-items: end;
     padding: 0 calc(100/1200 * 100%) 60px;
+    margin-bottom: 100px;
   }
 }
 
@@ -284,7 +285,7 @@
   padding: 18px 0 19px;
   min-width: 174px;
   border: 2px solid var(--clr-accent);
-  border-radius: 0;
+  border-radius: 6px;
   background-color: var(--clr-accent);
   cursor: pointer;
   box-sizing: border-box;
