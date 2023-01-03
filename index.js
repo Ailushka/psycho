@@ -9,6 +9,7 @@ burgerButton.addEventListener("click", function () {
     nav.classList.toggle("transition");
     menu.classList.toggle("nav-list_mobile");
     document.querySelector('.page').classList.toggle('no-scroll');
+    document.querySelector('html').classList.toggle('no-scroll');
 });
 
 menuLinks.forEach(menuLink => {
@@ -18,6 +19,7 @@ menuLinks.forEach(menuLink => {
     nav.classList.remove("transition");
     menu.classList.remove("nav-list_mobile");
     document.querySelector('.page').classList.remove('no-scroll');
+    document.querySelector('html').classList.remove('no-scroll');
   })
 });
 
