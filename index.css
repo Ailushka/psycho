@@ -279,7 +279,7 @@
 .test {
   position: relative;
   border: 10px solid #00416b;
-  height: 666px;
+  aspect-ratio: auto 555 / 691;
   border-radius: 6px;
 }
 
@@ -295,20 +295,20 @@
   background-image: url(./images/bg.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 666px;
+  aspect-ratio: auto 500 / 576;
   border-radius: 6px;
 }
 
 .test1__image {
   position: absolute;
-  bottom: 38px;
+  bottom: 0;
   left: -32px;
 }
 
 .test2 {
   border-radius: 50%;
   overflow: hidden;
-  height: 545px;
+  aspect-ratio: auto 545 / 545;
 }
 
 .promo:has(.test3) .promo__content {
@@ -357,6 +357,14 @@
   flex-direction: row;
   justify-content: center;
   column-gap: 10px;
+}
+
+@media (max-width: 1200px) {
+  .promo__content {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 80px;
+  }
 }
 
 .about {
