@@ -58,6 +58,10 @@
   background-position: center;
 }
 
+.social-link:has(.test4) .wa-link {
+  background-image: url(./images/whats-app-icon_dark.svg);
+}
+
 .tg-link {
   display: block;
   width: 40px;
@@ -68,6 +72,10 @@
   background-position: center;
 }
 
+.social-link:has(.test4) .tg-link {
+  background-image: url(./images/telegram-icon_dark.svg);
+}
+
 .email-link {
   display: block;
   width: 40px;
@@ -76,6 +84,14 @@
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.social-link:has(.test4) .email-link {
+  background-image: url(./images/mail-icon_dark.svg);
+}
+
+.promo:has(.test4) .promo__button {
+  background-color: #00416b;
 }
 
 .header {
@@ -346,6 +362,11 @@
 .social-link__button {
   min-width: 55px;
   min-height: 61px;
+}
+
+.test4 {
+  background-color: transparent;
+  border: none;
 }
 
 .promo__button {
