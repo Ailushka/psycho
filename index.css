@@ -267,10 +267,52 @@
 }
 
 .promo__image {
-  border: 10px solid var(--clr-accent);
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* -------------------- */
+/*  Hero image - tests  */
+/* -------------------- */
+
+.test {
+  position: relative;
+  border: 10px solid #00416b;
+  height: 666px;
+  border-radius: 6px;
+}
+
+.test__image {
+  position: absolute;
+  top: 50px;
+  left: -60px;
+  border-radius: 6px;
+}
+
+.test1 {
+  position: relative;
+  background-image: url(./images/bg.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 666px;
+  border-radius: 6px;
+}
+
+.test1__image {
+  position: absolute;
+  bottom: 38px;
+  left: -32px;
+}
+
+.test2 {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 545px;
+}
+
+.promo:has(.test3) .promo__content {
+  padding-bottom: 0;
 }
 
 .button {
