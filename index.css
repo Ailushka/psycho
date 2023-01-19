@@ -3,12 +3,13 @@
 
 :root {
   /* colors */
-  --clr-main: #FFFFFF;
-  --text-main: #141414;
-  --clr-secondary: #EBF3F5;
-  --clr-accent: #5C8692;
-  --text-secondary: #555555;
-  --clr-dark: #1E2C30;
+  --clr-main: #F7FAFC;
+  --text-main: #AE7C78;
+  --clr-secondary: rgba(174, 124, 120, 0.6);
+  --clr-accent: #D89999;
+  --text-secondary: #FFFFFF;
+  --clr-dark: #AE7C78;
+
 }
 
 .page {
@@ -19,6 +20,58 @@
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.site-title {
+  font-size: 36px;
+  line-height: calc(48 / 36);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding: 0;
+}
+
+.span-accent {
+  display: block;
+  font-size: 44px;
+  line-height: calc(59 / 44);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: calc(48 / 36);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding: 0;
+}
+
+.section-text {
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.section-text-bold {
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  line-height: calc(29 / 24);
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
 }
 
 .no-scroll {
@@ -46,44 +99,6 @@
 
 .link:hover {
   color: var(--clr-accent);
-}
-
-.wa-link {
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-image: url(./images/whats-app-icon.svg);
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.social-link:has(.test4) .wa-link {
-  background-image: url(./images/whats-app-icon_dark.svg);
-}
-
-.tg-link {
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-image: url(./images/telegram-icon.svg);
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.social-link:has(.test4) .tg-link {
-  background-image: url(./images/telegram-icon_dark.svg);
-}
-
-.email-link {
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-image: url(./images/mail-icon.svg);
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .social-link:has(.test4) .email-link {
@@ -222,11 +237,7 @@
 }
 
 .promo {
-  background: var(--clr-secondary);
-}
-
-.promo__content {
-  padding: 120px 0;
+  padding: 0 0 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -242,40 +253,8 @@
   text-align: center;
 }
 
-.promo__welcome {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--clr-accent);
-  padding: 0;
-  margin: 0;
-  margin-bottom: 5px;
-}
-
 .promo__title {
-  font-weight: 400;
-  font-size: 52px;
-  line-height: 62px;
-  letter-spacing: 0.66px;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 19px;
-}
-
-.span-accent {
-  display: block;
-}
-
-.promo__subtitle {
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 30px;
-  color: var(--text-secondary);
-  padding: 0;
-  margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 60px;
 }
 
 .image-container {
@@ -286,49 +265,7 @@
   width: 100%;
   height: auto;
   display: block;
-}
-
-/* -------------------- */
-/*  Hero image - tests  */
-/* -------------------- */
-
-.test {
-  position: relative;
-  border: 10px solid #00416b;
-  aspect-ratio: auto 555 / 691;
-  border-radius: 6px;
-}
-
-.test__image {
-  position: absolute;
-  top: 50px;
-  left: -60px;
-  border-radius: 6px;
-}
-
-.test1 {
-  position: relative;
-  background-image: url(./images/bg.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  aspect-ratio: auto 500 / 576;
-  border-radius: 6px;
-}
-
-.test1__image {
-  position: absolute;
-  bottom: 0;
-  left: -32px;
-}
-
-.test2 {
-  border-radius: 50%;
-  overflow: hidden;
-  aspect-ratio: auto 545 / 545;
-}
-
-.promo:has(.test3) .promo__content {
-  padding-bottom: 0;
+  border-radius: 60px;
 }
 
 .button {
@@ -342,8 +279,7 @@
   color: var(--clr-main);
   padding: 18px 0 19px;
   min-width: 174px;
-  border: 2px solid var(--clr-accent);
-  border-radius: 6px;
+  border-radius: 40px;
   background-color: var(--clr-accent);
   cursor: pointer;
   box-sizing: border-box;
@@ -355,18 +291,59 @@
 }
 
 .button:hover {
-  border: 2px solid var(--clr-dark);
+  background-color: var(--clr-dark);
   color: var(--clr-main);
 }
 
 .social-link__button {
-  min-width: 55px;
-  min-height: 61px;
-}
-
-.test4 {
   background-color: transparent;
   border: none;
+  min-width: 0;
+}
+
+.wa-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url(./images/whats-app-icon.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wa-link:hover {
+  background-image: url(./images/whats-app-icon_dark.svg);
+  background-color: transparent;
+}
+
+.tg-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url(./images/telegram-icon.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tg-link:hover {
+  background-image: url(./images/telegram-icon_dark.svg);
+  background-color: transparent;
+}
+
+.email-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url(./images/mail-icon.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.email-link:hover {
+  background-image: url(./images/mail-icon_dark.svg);
+  background-color: transparent;
 }
 
 .promo__button {
@@ -389,7 +366,7 @@
 }
 
 .about {
-  padding: 100px 0 110px;
+  padding: 60px 0 60px;
   display: flex;
   flex-direction: row;
   column-gap: 120px;
@@ -402,10 +379,13 @@
 
 .about__info {
   max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
 }
 
 .diplomas {
-  padding: 100px 0 119px 0;
+  padding: 60px 0;
 }
 
 .diplomas__title {
@@ -437,6 +417,7 @@
 
 .request {
   background: var(--clr-secondary);
+  border-radius: 30px;
 }
 
 .request__content {
@@ -446,6 +427,7 @@
 .request__title {
   text-align: center;
   margin-bottom: 60px;
+  color: white;
 }
 
 .request-list {
@@ -461,20 +443,21 @@
   min-height: 228px;
   background: var(--clr-main);
   border: 2px solid var(--clr-dark);
-  padding: 120px 22px 22px;
+  padding: 22px 22px 22px 100px;
   box-sizing: border-box;
   width: 45%;
+  border-radius: 30px;
 }
 
 .request-item::before {
   content: "";
   position: absolute;
-  top: 22px;
+  top: 40%;
   left: 22px;
-  width: 94px;
-  height: 94px;
+  width: 60px;
+  height: 60px;
   background-image: url(./images/check-icon.svg);
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -502,11 +485,15 @@
   position: relative;
 }
 
+.services {
+  padding: 60px 0;
+}
+
 .services__content {
-  padding: 0 0 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: var(--clr-dark);
 }
 
 .services__photo {
@@ -521,9 +508,21 @@
 
 .services__info {
   width: 50%;
-  padding-right: 60px;
+  padding: 0 60px;
   box-sizing: border-box;
-  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.services__name {
+  margin-bottom: 40px;
+}
+
+.services__price {
+  margin-bottom: 20px;
 }
 
 .contact-me {
@@ -551,6 +550,7 @@
   align-items: center;
   padding-right: 40px;
   box-sizing: border-box;
+  color: white;
 }
 
 .contact-me__photo {
