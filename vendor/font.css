@@ -15,3 +15,35 @@
   src: url("./fonts/Inter-SemiBold.woff2") format("woff2"),
        url("./fonts/Inter-SemiBold.woff") format("woff");
 }
+
+@font-face {
+  font-family: 'Forum';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/Forum-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/NotoSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Old Standard TT';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/OldStandardTT-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Tenor Sans';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/TenorSans-Regular.ttf") format("truetype");
+}

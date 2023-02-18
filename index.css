@@ -14,7 +14,7 @@
 
 .page {
   max-width: 1440px;
-  font-family: "Inter", "Arial", sans-serif;
+  font-family: "Noto Sans", "Arial", sans-serif;
   background: var(--clr-main);
   color: var(--text-main);
   margin: 0 auto;
@@ -32,6 +32,7 @@
 }
 
 .span-accent {
+  font-family: "Tenor Sans", "Arial", sans-serif;
   display: block;
   font-size: 44px;
   line-height: calc(59 / 44);
@@ -50,12 +51,28 @@
   padding: 0;
 }
 
+.section-title_font_tenor {
+  font-family: "Tenor Sans", "Arial", sans-serif;
+}
+
+.section-title_font_forum {
+  font-family: "Forum", "Times New Roman", serif;
+}
+
 .section-text {
   font-size: 16px;
   line-height: calc(24 / 16);
   font-weight: 500;
   margin: 0;
   padding: 0;
+}
+
+.section-text_font_noto {
+  font-family: "Noto Sans", "Arial", sans-serif;
+}
+
+.section-text_font_oldstandardtt {
+  font-family: "Old Standard TT", "Times New Roman", serif;
 }
 
 .section-text-bold {
