@@ -51,28 +51,16 @@
   padding: 0;
 }
 
-.section-title_font_tenor {
+.font_family_tenor {
   font-family: "Tenor Sans", "Arial", sans-serif;
 }
 
-.section-title_font_forum {
-  font-family: "Forum", "Times New Roman", serif;
-}
-
 .section-text {
-  font-size: 16px;
+  font-size: 18px;
   line-height: calc(24 / 16);
   font-weight: 500;
   margin: 0;
   padding: 0;
-}
-
-.section-text_font_noto {
-  font-family: "Noto Sans", "Arial", sans-serif;
-}
-
-.section-text_font_oldstandardtt {
-  font-family: "Old Standard TT", "Times New Roman", serif;
 }
 
 .section-text-bold {
@@ -89,6 +77,12 @@
   font-weight: 500;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 992px) {
+  .section-text {
+    font-size: 16px;
+  }
 }
 
 .no-scroll {
@@ -420,39 +414,64 @@
 
 .about__content {
   padding: 60px 0 60px;
-  display: flex;
-  flex-direction: row;
-  column-gap: 120px;
-  justify-content: space-between;
-}
-
-.about__image {
-  width: 80%;
-  display: block;
-  margin: auto;
-  border-radius: 30px;
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "title title title"
+                       "intro photo techniques"
+                       "approach photo support";
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .about__title {
   margin: auto;
+  grid-area: title;
 }
 
-.about__info {
-  max-width: 50%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 15px;
+.test {
+  gap: 40px;
+  grid-template-areas:
+      "title photo ."
+      "intro photo techniques"
+      "approach photo support";
 }
 
-@media (max-width: 960px) {
-  .about__content {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .about__info {
-    max-width: 100%;
-    order: -1;
-    margin-bottom: 40px;
+.test__title {
+  margin: auto 0;
+}
+
+.about__image {
+  width: 100%;
+  display: block;
+  margin: auto;
+  border-radius: 30px;
+  grid-area: photo;
+}
+
+.about__text_type_intro {
+  grid-area: intro;
+}
+
+.about__text_type_approach {
+  grid-area: approach;
+}
+
+.about__text_type_techniques {
+  grid-area: techniques;
+}
+
+.about__text_type_support {
+  grid-area: support;
+}
+
+@media (max-width: 992px) {
+  .about__content, .test {
+    grid-template-areas: "title"
+                         "intro"
+                         "approach"
+                         "photo"
+                         "techniques"
+                         "support";
+    grid-template-columns: 1fr;
   }
   .about__image {
     width: 50%;
