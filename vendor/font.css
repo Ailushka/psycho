@@ -47,3 +47,11 @@
   font-display: swap;
   src: url("./fonts/TenorSans-Regular.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: 'Dancing Script';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/DancingScript-SemiBold.ttf") format("truetype");
+}

@@ -20,6 +20,7 @@
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 .site-title {
@@ -245,7 +246,7 @@
 }
 
 .main {
-  position: relative;
+  overflow: hidden;
 }
 
 .promo {
@@ -256,18 +257,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 48%;
+  align-items: center;
+  gap: 40px;
+  width: 40%;
   padding: 100px 0;
   position: relative;
   z-index: 1;
 }
 
 .promo__title {
-  margin-bottom: 60px;
+  text-align: center;
 }
 
 .promo__title .span-accent {
-  margin: 30px 0;
+  margin: 15px 0;
 }
 
 .image-container {
@@ -276,11 +279,11 @@
 .promo__image {
   display: block;
   position: absolute;
-  top: -107px;
-  right: -17px;
+  top: 0;
+  right: 0;
   width: 60%;
   clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
-  max-height: 710.99px;
+  max-height: 680px;
   object-fit: contain;
 }
 
@@ -342,6 +345,14 @@
   background-color: transparent;
 }
 
+.wa-link_dark {
+  background-image: url(./images/whats-app-icon_dark.svg);
+}
+
+.wa-link_dark:hover {
+  background-image: url(./images/whats-app-icon.svg);
+}
+
 .tg-link {
   display: block;
   width: 40px;
@@ -355,6 +366,14 @@
 .tg-link:hover {
   background-image: url(./images/telegram-icon_dark.svg);
   background-color: transparent;
+}
+
+.tg-link_dark {
+  background-image: url(./images/telegram-icon_dark.svg);
+}
+
+.tg-link_dark:hover {
+  background-image: url(./images/telegram-icon.svg);
 }
 
 .email-link {
@@ -372,9 +391,16 @@
   background-color: transparent;
 }
 
+.email-link_dark {
+  background-image: url(./images/mail-icon_dark.svg);
+}
+
+.email-link_dark:hover {
+  background-image: url(./images/mail-icon.svg);
+}
+
 .promo__button {
-  margin-bottom: 20px;
-  width: 80%;
+  width: 90%;
 }
 
 .social-links {
@@ -382,7 +408,6 @@
   flex-direction: row;
   justify-content: center;
   column-gap: 10px;
-  width: 35%;
 }
 
 @media (max-width: 960px) {
@@ -485,7 +510,7 @@
 .diplomas-list {
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
   gap: 12px;
 }
 
@@ -561,6 +586,19 @@
 }
 
 .request {
+  position: relative;
+}
+
+.request::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #CFAFAE;
+  left: -100px;
+  top: -70px;
+  z-index: -1;
 }
 
 .request__content {
@@ -584,19 +622,26 @@
   border: 2px solid var(--clr-dark);
   padding: 22px;
   box-sizing: border-box;
-  border-radius: 30px;
+  border-radius: 30px 0 30px 0;
+}
+
+.request-item:nth-child(even) {
+  border-radius: 0 30px 0 30px;
 }
 
 .request-item__title {
   position: relative;
-  padding-left: 65px;
-  margin: 15px 0 25px;
+  padding-left: 60px;
+  margin: 0 0 10px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .request-item__title::before {
   content: "";
   position: absolute;
-  top: -16px;
+  top: 0;
   left: 0;
   width: 50px;
   height: 50px;
@@ -628,7 +673,7 @@
   width: 100%;
   height: 100%;
   display: block;
-  border-radius: 30px;
+  border-radius: 0 100px 0 0;
   object-fit: cover;
   object-position: center;
 }
@@ -672,6 +717,23 @@
 .contact-me {
   margin: 0 auto;
   padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+}
+
+.contact-me::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #CFAFAE;
+  right: -185px;
+  top: -130px;
+  z-index: -1;
 }
 
 .cover-image {
@@ -682,22 +744,24 @@
 
 .contact-me__info {
   width: 25%;
-  margin: 0 auto;
   text-align: center;
+  padding: 40px;
+  border: 2px solid var(--clr-dark);
+  border-radius: 0 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .contact-me__photo {
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin: -100px auto 20px;
+  max-width: 400px;
 }
 
 .contact-me__image {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 500px 500px 0 0;
 }
 
 .footer{
@@ -708,9 +772,33 @@
 
 .footer__content {
   padding-bottom: 25px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid var(--clr-main);
+  display: flex;
+  justify-content: center;
 }
 
 .footer__social-links {
   margin: 0 auto;
+}
+
+.footer__copyright {
+  font-family: "Dancing Script", "Arial", sans-serif;
+  color: var(--clr-main);
+  margin: 0;
+  padding: 0;
+  font-size: 44px;
+  position: relative;
+  margin-left: 110px;
+}
+
+.footer__copyright::before {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: url(./images/psy-icon.svg);
+  left: -110px;
+  bottom: -20px;
+  background-position: center;
+  background-size: cover;
 }
