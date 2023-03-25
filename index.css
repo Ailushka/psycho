@@ -537,8 +537,9 @@ html:has(.nav_opened) {
 
 .diplomas-list {
   margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
 }
 
@@ -549,6 +550,7 @@ html:has(.nav_opened) {
   min-width: 296px;
   box-sizing: border-box;
   margin: auto;
+  flex: 1 0 296px;
 }
 
 .slide__image {
@@ -564,6 +566,9 @@ html:has(.nav_opened) {
   }
   .diplomas__title {
     margin-bottom: 30px;
+  }
+  .diplomas-list__item {
+    flex-grow: 0;
   }
 }
 
