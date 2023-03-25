@@ -443,6 +443,7 @@ html:has(.nav_opened) {
     margin: 0;
   }
   .promo__button {
+    width: 60%;
   }
   .promo__image {
     display: block;
@@ -457,6 +458,12 @@ html:has(.nav_opened) {
 }
 
 @media (max-width: 768px) {
+  .promo__button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
   .promo__button {
     width: 100%;
   }
