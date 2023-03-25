@@ -115,8 +115,10 @@ html:has(.nav_opened) {
   transition: color .2s ease-in-out;
 }
 
-.link:hover {
-  color: var(--clr-accent);
+@media (hover: hover) {
+  .link:hover {
+    color: var(--clr-accent);
+  }
 }
 
 .social-link:has(.test4) .email-link {
@@ -308,7 +310,7 @@ html:has(.nav_opened) {
   line-height: 20px;
   letter-spacing: 1.56px;
   color: var(--clr-main);
-  padding: 18px 0 19px;
+  padding: 18px 18px 19px;
   min-width: 174px;
   border-radius: 40px;
   background-color: var(--clr-accent);
@@ -321,19 +323,9 @@ html:has(.nav_opened) {
   transition: all .5s linear;
 }
 
-.button:hover {
-  background-color: var(--clr-dark);
-  color: var(--clr-main);
-}
-
 .button_type_dark {
   background-color: var(--clr-main);
   color: var(--clr-dark);
-}
-
-.button_type_dark:hover {
-  background-color: var(--clr-dark);
-  color: var(--clr-main);
 }
 
 .social-link__button {
@@ -352,17 +344,8 @@ html:has(.nav_opened) {
   background-position: center;
 }
 
-.wa-link:hover {
-  background-image: url(./images/whats-app-icon_dark.svg);
-  background-color: transparent;
-}
-
 .wa-link_dark {
   background-image: url(./images/whats-app-icon_dark.svg);
-}
-
-.wa-link_dark:hover {
-  background-image: url(./images/whats-app-icon.svg);
 }
 
 .tg-link {
@@ -375,17 +358,8 @@ html:has(.nav_opened) {
   background-position: center;
 }
 
-.tg-link:hover {
-  background-image: url(./images/telegram-icon_dark.svg);
-  background-color: transparent;
-}
-
 .tg-link_dark {
   background-image: url(./images/telegram-icon_dark.svg);
-}
-
-.tg-link_dark:hover {
-  background-image: url(./images/telegram-icon.svg);
 }
 
 .email-link {
@@ -398,17 +372,40 @@ html:has(.nav_opened) {
   background-position: center;
 }
 
-.email-link:hover {
-  background-image: url(./images/mail-icon_dark.svg);
-  background-color: transparent;
-}
-
 .email-link_dark {
   background-image: url(./images/mail-icon_dark.svg);
 }
 
-.email-link_dark:hover {
-  background-image: url(./images/mail-icon.svg);
+@media (hover: hover) {
+  .button:hover {
+    background-color: var(--clr-dark);
+    color: var(--clr-main);
+  }
+  .button_type_dark:hover {
+    background-color: var(--clr-dark);
+    color: var(--clr-main);
+  }
+  .wa-link:hover {
+    background-image: url(./images/whats-app-icon_dark.svg);
+    background-color: transparent;
+  }
+  .wa-link_dark:hover {
+    background-image: url(./images/whats-app-icon.svg);
+  }
+  .tg-link:hover {
+    background-image: url(./images/telegram-icon_dark.svg);
+    background-color: transparent;
+  }
+  .tg-link_dark:hover {
+    background-image: url(./images/telegram-icon.svg);
+  }
+  .email-link:hover {
+    background-image: url(./images/mail-icon_dark.svg);
+    background-color: transparent;
+  }
+  .email-link_dark:hover {
+    background-image: url(./images/mail-icon.svg);
+  }
 }
 
 .promo__button {
@@ -992,10 +989,12 @@ html:has(.nav_opened) {
   transform: rotate(180deg) scale(0.5);
 }
 
-.button_type_close:hover {
-  opacity: 0.6;
-  background-color: transparent;
-  cursor: pointer;
+@media (hover: hover) {
+  .button_type_close:hover {
+    opacity: 0.6;
+    background-color: transparent;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 640px) {
