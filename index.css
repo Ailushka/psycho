@@ -553,6 +553,13 @@ html:has(.nav_opened) {
   flex: 1 0 296px;
 }
 
+@media (hover: hover) {
+  .diplomas-list__item {
+    cursor: pointer;
+  }
+}
+
+
 .slide__image {
   display: block;
   width: 100%;
