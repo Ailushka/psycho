@@ -96,6 +96,7 @@ html:has(.nav_opened) {
   overflow: hidden;
   position: relative;
   height: 100%;
+  padding-right: 17px;
 }
 
 .container {
@@ -489,10 +490,15 @@ html:has(.nav_opened) {
 }
 
 .about__image {
-  width: 70%;
+  width: 75%;
   display: block;
-  margin: auto;
+  margin: 0 auto;
   grid-area: photo;
+  align-self: end;
+}
+
+.about__text {
+  align-self: end;
 }
 
 .about__text_type_intro {
