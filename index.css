@@ -96,7 +96,6 @@ html:has(.nav_opened) {
   overflow: hidden;
   position: relative;
   height: 100%;
-  padding-right: 17px;
 }
 
 .container {
