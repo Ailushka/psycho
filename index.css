@@ -22,6 +22,7 @@
 }
 
 .site-title {
+  font-family: "Tenor Sans", "Arial", sans-serif;
   font-size: 36px;
   line-height: calc(48 / 36);
   font-weight: 500;
@@ -119,6 +120,9 @@ html:has(.nav_opened) {
 @media (hover: hover) {
   .link:hover {
     color: var(--clr-accent);
+  }
+  .footer__nav-list .link:hover {
+    color: #e3dedb;
   }
 }
 
@@ -335,46 +339,74 @@ html:has(.nav_opened) {
   min-width: 0;
 }
 
-.wa-link {
-  display: block;
+.social-link {
   width: 40px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo__info .social-link {
+  width: 50px;
+  height: 50px;
+}
+
+.wa-link {
+  display: block;
   background-image: url(./images/whats-app-icon.svg);
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
 }
 
 .wa-link_dark {
   background-image: url(./images/whats-app-icon_dark.svg);
 }
 
+.wa-link_white {
+  background-image: url(./images/whats-app-icon_white.svg);
+}
+
 .tg-link {
   display: block;
-  width: 40px;
-  height: 40px;
   background-image: url(./images/telegram-icon.svg);
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
 }
 
 .tg-link_dark {
   background-image: url(./images/telegram-icon_dark.svg);
 }
 
+.tg-link_white {
+  background-image: url(./images/telegram-icon_white.svg);
+}
+
 .email-link {
   display: block;
-  width: 40px;
-  height: 40px;
   background-image: url(./images/mail-icon.svg);
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
 }
 
 .email-link_dark {
   background-image: url(./images/mail-icon_dark.svg);
+}
+
+.email-link_white {
+  background-image: url(./images/mail-icon_white.svg);
 }
 
 @media (hover: hover) {
@@ -393,6 +425,9 @@ html:has(.nav_opened) {
   .wa-link_dark:hover {
     background-image: url(./images/whats-app-icon.svg);
   }
+  .wa-link_white:hover {
+    background-image: url(./images/whats-app-icon_light.svg);
+  }
   .tg-link:hover {
     background-image: url(./images/telegram-icon_dark.svg);
     background-color: transparent;
@@ -400,12 +435,18 @@ html:has(.nav_opened) {
   .tg-link_dark:hover {
     background-image: url(./images/telegram-icon.svg);
   }
+  .tg-link_white:hover {
+    background-image: url(./images/telegram-icon_light.svg);
+  }
   .email-link:hover {
     background-image: url(./images/mail-icon_dark.svg);
     background-color: transparent;
   }
   .email-link_dark:hover {
     background-image: url(./images/mail-icon.svg);
+  }
+  .email-link_white:hover {
+    background-image: url(./images/mail-icon_light.svg);
   }
 }
 
@@ -586,14 +627,14 @@ html:has(.nav_opened) {
 }
 
 .guarantee {
-  padding: 60px 0;
+  padding: 50px 0;
   background-color: #e3dedb;
   border-radius: 30px;
 }
 
 .guarantee__title {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .guarantee-list {
@@ -616,7 +657,7 @@ html:has(.nav_opened) {
 }
 
 .guarantee__image-container {
-  width: 200px;
+  width: 125px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: var(--clr-main);
@@ -631,6 +672,8 @@ html:has(.nav_opened) {
 }
 
 .guarantee__heading {
+  font-size: 20px;
+  font-weight: 700;
   text-align: center;
   padding: 0 10px;
 }
@@ -649,7 +692,7 @@ html:has(.nav_opened) {
     margin-bottom: 30px;
   }
   .guarantee__image-container {
-    width: 140px;
+    width: 100px;
   }
 }
 
@@ -897,14 +940,22 @@ html:has(.nav_opened) {
 }
 
 .footer__content {
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   border-bottom: 1px solid var(--clr-main);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+}
+
+.footer__content
+
+.contact-me__social-links {
+  margin: 0 auto;
 }
 
 .footer__social-links {
-  margin: 0 auto;
+  column-gap: 25px;
 }
 
 .footer__copyright {
@@ -912,42 +963,59 @@ html:has(.nav_opened) {
   color: var(--clr-main);
   margin: 0;
   padding: 0;
-  font-size: 44px;
+  font-size: 36px;
   position: relative;
-  margin-left: 110px;
+  margin-left: 70px;
+  line-height: 36px;
 }
 
 .footer__copyright::before {
   content: '';
   position: absolute;
-  width: 90px;
-  height: 90px;
+  width: 50px;
+  height: 50px;
   background: url(./images/psy-icon.svg);
-  left: -110px;
-  bottom: -20px;
+  left: -70px;
+  bottom: -5px;
   background-position: center;
   background-size: cover;
 }
 
-@media (max-width: 640px) {
+.footer__nav-list {
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .footer__nav-list {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .footer__content {
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 768px) {
   .footer {
     padding-bottom: 50px;
   }
   .footer__content {
     padding-bottom: 10px;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
   }
   .footer__copyright {
+    order: 1;
     font-size: 30px;
     margin-left: 50px;
   }
   .footer__copyright::before {
-    width: 50px;
-    height: 50px;
     left: -60px;
     bottom: -8px;
   }
 }
-
 /* Popup */
 
 .popup {
