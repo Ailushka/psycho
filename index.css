@@ -448,12 +448,11 @@ html:has(.nav_opened) {
     border-top: 10px solid #e3dedb;
 }
 
-.social-link__button:hover .tooltip{
-  visibility: visible;
-  opacity: 1;
-}
-
 @media (hover: hover) {
+  .social-link__button:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+  }
   .button:hover {
     background-color: var(--clr-dark);
     color: var(--clr-main);
@@ -1068,7 +1067,7 @@ html:has(.nav_opened) {
   }
   .footer__copyright::before {
     left: -60px;
-    bottom: -8px;
+    bottom: -4px;
   }
 }
 /* Popup */
