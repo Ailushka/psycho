@@ -337,6 +337,7 @@ html:has(.nav_opened) {
   background-color: transparent;
   border: none;
   min-width: 0;
+  position: relative;
 }
 
 .social-link {
@@ -407,6 +408,49 @@ html:has(.nav_opened) {
 
 .email-link_white {
   background-image: url(./images/mail-icon_white.svg);
+}
+
+.tooltip {
+  bottom: 50px;
+    left: 50%;
+    margin-left: -50px;
+    box-sizing: border-box;
+    width: 100px;
+    padding: 2px;
+    color: #AE7C78;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 4px solid #e3dedb;
+    background: #e3dedb;
+    text-indent: 0px;
+    border-radius: 5px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .6s, opacity .5s linear;
+    box-shadow: 0 0 2px 1px #e3dedb;
+}
+
+.promo .tooltip {
+  bottom: 60px;
+}
+
+.tooltip:after{
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #e3dedb;
+}
+
+.social-link__button:hover .tooltip{
+  visibility: visible;
+  opacity: 1;
 }
 
 @media (hover: hover) {
@@ -554,19 +598,34 @@ html:has(.nav_opened) {
   grid-area: support;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .about__content {
     padding: 30px 0 30px;
     gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .about__title {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about__content {
+    grid-template-areas: "photo title"
+                         "photo intro"
+                         "approach approach"
+                         "support support";
+  }
+}
+
+@media (max-width: 640px) {
+  .about__content {
     grid-template-areas: "title"
                          "intro"
                          "photo"
                          "approach"
                          "support";
     grid-template-columns: 1fr;
-  }
-  .about__title {
-    margin-bottom: 10px;
   }
   .about__image {
     width: 50%;
@@ -944,7 +1003,7 @@ html:has(.nav_opened) {
   border-bottom: 1px solid var(--clr-main);
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
   gap: 40px;
 }
 
@@ -959,11 +1018,11 @@ html:has(.nav_opened) {
 }
 
 .footer__copyright {
-  font-family: "Dancing Script", "Arial", sans-serif;
+  font-family: "Tenor Sans", "Arial", sans-serif;
   color: var(--clr-main);
   margin: 0;
   padding: 0;
-  font-size: 36px;
+  font-size: 26px;
   position: relative;
   margin-left: 70px;
   line-height: 36px;
@@ -990,9 +1049,6 @@ html:has(.nav_opened) {
     flex-direction: column;
     row-gap: 10px;
   }
-  .footer__content {
-    align-items: center;
-  }
 }
 
 
@@ -1008,7 +1064,6 @@ html:has(.nav_opened) {
   }
   .footer__copyright {
     order: 1;
-    font-size: 30px;
     margin-left: 50px;
   }
   .footer__copyright::before {
